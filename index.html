@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="left">
+            <div class="top">
+                <div class="logo">
+                    <img src="imgs/logo.svg" alt="logo" class="logo_img">
+                    <h2>GOODFOOD</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            
+            <nav class="menu">
+                <div>
+                    <span class="menu__span">MENU</span>
+                    <a href="#!" class="menu__link active">
+                        <img src="imgs/analytics.svg" alt="analytics">
+                        <h3 class="menu-title">Dashboard</h3>
+                    </a>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/buy.svg" alt="buy">
+                        <h3>Food Order</h3>
+                    </a>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/document.svg" alt="document">
+                        <h3>Manage menu</h3>
+                    </a>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/chat.svg" alt="chat">
+                        <h3>Customer Review</h3>
+                    </a>
+                </div>
+                <div>
+                    <span class="menu__span">OTHERS</span>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/setting.svg" alt="setting">
+                        <h3 class="menu-title">Settings</h3>
+                    </a>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/wallet.svg" alt="wallet">
+                        <h3 class="menu-title">Payment</h3>
+                    </a>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/profile.svg" alt="profile">
+                        <h3 class="menu-title">Accounts</h3>
+                    </a>
+                    <a href="#!" class="menu__link">
+                        <img src="imgs/info.svg" alt="info">
+                        <h3 class="menu-title">Help</h3>
+                    </a>
+                </div>
+                
+            </nav>
+            
+        </aside>
+        <header>
+            <div class="account">
+                <img src="imgs/burger.svg" alt="burger" id="burger">
+                <h4>Delicious Burger</h4>
+                <img src="imgs/chevron_down.svg" alt="chevron__down" id="chevron__down">
+                <img src="imgs/bell.svg" alt="bell" id="bell">
+            </div>
+            
+            
+
+        </header>
+        <main>
+            <div class="graph__container">
+                <div class="graph__top">
+                    <div class="graph__top__text">
+                        <p class="graph__header">Revenue</p>
+                        <h1>IDR 7.852.000</h1>
+                        <p class="graph__percentage"> <img src="imgs/Arrow Up.svg" alt=""> <span>2.1%</span> vs last week</p>
+                        <p class="graph__info">Sales from 1-7 Feb, 2025</p>
+                    </div>
+                    <div>
+                        <a href="#!" class="view-report">View Report</a>
+                    </div>
+                </div>
+                <div class="graph">
+                    <div class="chart">
+                        <p>First courses - 20%</p>
+                        <div class="pipe">
+                            <div class="sector1"></div>
+                        </div>
+                        <p>Burgers - 30%</p>
+                        <div class="pipe">
+                            <div class="sector2"></div>
+                        </div>
+                        <p>Lunch boxes - 40%</p>
+                        <div class="pipe">
+                            <div class="sector3"></div>
+                        </div>
+                        <p>Drinks and snacks - 10%</p>
+                        <div class="pipe">
+                            <div class="sector4"></div>
+                        </div>
+                    </div>
+                    <div class="last__days" style="display: flex; gap: 2%;">
+                        <span class="circle"></span>
+                        <p>Last 7 days</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="order-time-block">
+                <div class="graph__top">
+                    <div class="graph__top__text">
+                        <h2 class="graph__header">Order Time</h2>
+                        <p class="graph__info">From 1-6 Feb, 2025</p>
+                    </div>
+                    <div>
+                        <a href="#!" class="view-report">View Report</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart">
+                        <svg width="150" height="150" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="10"></circle>
+        
+                            <circle class="circle-segment segment-1" cx="50" cy="50" r="45" fill="none" stroke="#5A6ACF" stroke-width="10" 
+                            stroke-dasharray="115.097, 282.74" transform="rotate(-90 50 50)"></circle>
+        
+                            <circle class="circle-segment segment-2" cx="50" cy="50" r="45" fill="none" stroke="#8593ED" stroke-width="10" 
+                            stroke-dasharray="97.4768, 282.74" transform="rotate( 54 50 50)"></circle>
+        
+                            <circle class="circle-segment segment-3" cx="50" cy="50" r="45" fill="none" stroke="#C7CEFF" stroke-width="10" 
+                            stroke-dasharray="97.1672, 282.74" transform="rotate( 146 50 50)"></circle>
+                        </svg>
+                    </div>
+                    <div class="chart-info">
+                        <div class="info-box">
+                            <h3 class="info-title">Afternooon</h3>
+                            <p class="time">1pm - 4pm</p>
+                            <p class="orders">1.890 orders</p>
+                        </div>
+                    </div>
+                    <div class="marks__container">
+                        <div class="marks">
+                            <span class="circle accent"></span>
+                            <div class="marks__text">
+                                <p>Afternoon</p>
+                                <p>40%</p>
+                            </div>
+                        </div>
+                        <div class="marks">
+                            <span class="circle accent-2"></span>
+                            <div class="marks__text">
+                                <p>Evening</p>
+                                <p>32%</p>
+                            </div>
+                        </div>
+                        <div class="marks">
+                            <span class="circle accent-3"></span>
+                            <div class="marks__text">
+                                <p>Morning</p>
+                                <p>28%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div>
+                <div class="graph__top__text">
+                    <p class="graph__header">Your Rating</p>
+                    <p class="graph__info">Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+                
+            </div>
+            <div>
+                <div class="graph__top__text">
+                    <p class="graph__header">Most Ordered Food</p>
+                    <p class="graph__info">Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+                <table>
+                    <tr>
+                        <td><img src="imgs/salad.png" alt="Fresh Salad Bowl"></td>
+                        <td>Fresh Salad Bowl</td>
+                        <td>IDR 45.000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/chiken_noodles.png" alt="Chicken Noodles"></td>
+                        <td>Chicken Noodles</td>
+                        <td>IDR 75.000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/smoothie_fruits.png" alt="Smoothie Fruits"></td>
+                        <td>Smoothie Fruits</td>
+                        <td>IDR 45.000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/chicken_wings.png" alt="Hot Chicken Wings"></td>
+                        <td>Hot Chicken Wings</td>
+                        <td>IDR 45.000</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div class="graph__top">
+                    <div class="graph__top__text">
+                        <h2 class="graph__header">Order</h2>
+                        <p class="graph__info">From 1-6 Feb, 2025</p>
+                    </div>
+                    <div>
+                        <a href="#!" class="view-report">View Report</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

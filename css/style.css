@@ -1,44 +1,3 @@
-/* poppins-300 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/poppins-v22-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* poppins-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* poppins-500 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/poppins-v22-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* poppins-600 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* poppins-800 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../fonts/poppins-v22-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 :root {
     --hover: rgba(112,127,221,0.1);
     --color-accent: #5A6ACF;
@@ -72,227 +31,55 @@ header {
 }
 
 h1 {
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: clamp(1rem, 0.8936rem + 0.4539vw, 1.2rem);;
+    letter-spacing: 0.5px;
 }
 
 h2 {
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(0.8rem, 0.6936rem + 0.4539vw, 1rem);
+    letter-spacing: 0.5px;
 }
 
+h3 {
+    font-weight: 400;
+    font-size: clamp(0.7rem, 0.5936rem + 0.4539vw, 0.9rem);
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+    font-weight: 500;
+    font-size: clamp(0.9rem, 0.7936rem + 0.4539vw, 1.1rem);
+    letter-spacing: 0.5px;
+    color: #1F384C;
+}
+
+p {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: clamp(0.6rem, 0.4936rem + 0.4539vw, 0.8rem);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.account p {
+    color: rgb(0,0,0) !important;
+}
+
+.logo h1 {
+    color: var(--color-accent) !important;
+    font-size: clamp(1rem, 0.8936rem + 0.4539vw, 1.2rem) !important;
+    font-weight: 600 !important;
+}
+
+/* Многоразовые классы */
 .border__right {
     border-right: 1px solid #C8CBD9;
 }
 
 .border__bottom {
     border-bottom: 1px solid #C8CBD9;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 5% 1fr;
-    gap: 3rem;
-    width: 96%;
-
-}
-
-.left {
-    height: 100vh;
-    background: var(--left-panel);
-    grid-row: span 2 / span 2;
-}
-
-.active {
-    padding-left: 20%;
-    margin-right: 10%;
-    border-radius: 10px;
-    
-    background-color: var(--hover);
-    color: var(--color-accent) !important;
-}
-
-main {
-    grid-column-start: 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-}
-
-.menu__link {
-    display: flex;
-    align-items: center;
-    color: var(--color-info);
-    margin-left: 2rem;
-    gap: 1rem;
-    position: relative;
-    height: 3.7rem;
-    transition: all 0.5s ease;
-}
-
-.menu__link:hover {
-    color: var(--color-accent);
-}
-
-.menu__link img {
-    font-size: 1.6rem;
-}
-
-/* .menu__link h3 {
-    font-weight: 400;
-} */
-
-.menu__span {
-    display: flex;
-    align-items: center;
-    color: var(--color-info);
-    margin-left: 2rem;
-    gap: 1rem;
-    position: relative;
-    height: 3.7rem;
-    transition: all 0.5s ease;
-}
-
-.top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
-}
-
-.close {
-    display: none
-}
-
-.logo {
-    margin-left: 2rem;
-    display: flex;
-    gap: 0.8rem;
-}
-
-.logo h2 {
-    color: var(--color-accent);
-    font-size: 20px !important;
-    font-weight: 600;
-}
-
-/* Менюшка слева сверху */
-.account {
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 1%;
-}
-
-.account img:last-child {
-    margin-left: 1%;
-}
-
-#burger {
-    width: 30px;
-    height:30px;
-    padding: 3px;
-    background-color: #FFE6CC;
-    border-radius: 50%;
-
-}
-
-#chevron__down {
-    width: 20px;
-    height: 20px;
-}
-
-#bell {
-    width: 20px;
-    height: 20px;
-}
-/* ГРАФ 1 */
-.graph__container {
-    padding: 5px;
-    grid-column: span 2 / span 2;
-}
-
-.graph__top {
-    display: flex;
-    justify-content:space-between;
-    flex-direction: row;
-}
-
-.graph__top__text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 10px;
-}
-
-.view-report {
-    text-decoration: none;
-    color: var(--color-accent);
-    padding: 5px 10px;
-    /* border: 1px solid #3498db; */
-    background-color: rgba(0, 94, 255, 0.1);
-    border-radius: 5px;
-    font-size: 14px;
-    transition: all 0.5s linear;
-}
-
-.view-report:hover {
-    background-color: var(--color-accent);
-    color: #fff;
-}
-
-.graph__percentage span {
-    color: #1c9d54;
-}
-
-.graph__info {
-    font-weight: 400;
-    font-size: 13px;
-    opacity: 0.5;
-}
-
-.pipe {
-    background: #ebeaea none repeat scroll 0 0;
-    box-shadow: 3px 3px 3px 0 rgb(200, 200, 200) inset;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    margin-bottom: 1.2rem;
-}
-
-.chart p {
-    margin: 0 0 5px;
-}
-
-.chart .pipe > div  {
-    background: var(--color-accent);
-    border-radius: 5px;
-    height: 10px;
-}
-
-.sector1 {
-    width: 20%;
-}
-
-.sector2 {
-    width: 30%;
-}
-
-.sector3 {
-    width: 40%;
-}
-
-.sector4 {
-    width: 10%;
-}
-
-.last__days {
-    gap: 3%;
-    display: flex;
-    align-items: center;
 }
 
 .circle {
@@ -315,29 +102,222 @@ main {
     background-color: var(--color-accent-3) !important;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: clamp(12rem, 8.8085rem + 13.6170vw, 18rem) 5fr;
+    grid-template-rows: 5% 2% 1fr;
+    gap: 3rem;
+    width: 96%;
+
+}
+
+.left {
+    height: 100vh;
+    background: var(--left-panel);
+    grid-row: span 3 / span 3;
+}
+
+main {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+    color: var(--color-info);
+    margin-left: 2rem;
+    gap: 1rem;
+    position: relative;
+    height: 3.7rem;
+    transition: all 0.5s ease;
+    font-weight: 700 !important;
+}
+
+.menu__link:hover {
+    color: var(--color-accent);
+}
+
+.menu__link img {
+    font-size: 1.6rem;
+}
+
+.active {
+    padding-left: 20%;
+    margin-right: 10%;
+    border-radius: 10px;
+    
+    background-color: var(--hover);
+    color: var(--color-accent) !important;
+}
+
+.menu__span {
+    display: flex;
+    align-items: center;
+    color: var(--color-info);
+    margin-left: 2rem;
+    gap: 1rem;
+    position: relative;
+    height: 3.7rem;
+    transition: all 0.5s ease;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+.close {
+    display: none
+}
+
+.logo {
+    margin-left: 2rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* Менюшка слева сверху */
+.account {
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1%;
+}
+
+.account img:last-child {
+    margin-left: 1%;
+}
+
+#menu-btn {
+    display: none;
+}
+
+#burger {
+    width: 30px;
+    height:30px;
+    padding: 5px;
+    background-color: #FFE6CC;
+    border-radius: 50%;
+
+}
+
+#chevron__down {
+    width: 20px;
+    height: 20px;
+}
+
+#bell {
+    width: 20px;
+    height: 20px;
+}
+
+/* ГРАФ 1 */
+.graph__container {
+    grid-column: span 2 / span 2;
+}
+
+.graph__top {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+}
+
+.view-report {
+    text-decoration: none;
+    color: var(--color-accent);
+    padding: 5px 10px;
+    /* border: 1px solid #3498db; */
+    background-color: rgba(0, 94, 255, 0.1);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.5s linear;
+}
+
+.view-report:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.graph__percentage_up span {
+    color: #1c9d54;
+    font-weight: 500;
+}
+
+.graph__percentage_down span {
+    color: #f2383a;
+    font-weight: 500;
+}
+
+.pipe {
+    background: #ebeaea none repeat scroll 0 0;
+    width: 100%;
+    height: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.chart__first p {
+    margin: 0 0 1%;
+}
+
+.chart__first .pipe > div  {
+    background: var(--color-accent);
+    height: 10px;
+}
+
+.sector1 {
+    width: 20%;
+}
+
+.sector2 {
+    width: 30%;
+}
+
+.sector3 {
+    width: 40%;
+}
+
+.sector4 {
+    width: 10%;
+}
+
+.last__days {
+    gap: 1%;
+    display: flex;
+    align-items: center;
+}
+
 /* ГРАФ 2 */
+.chart__second {
+    position: relative;
+}
+
 .chart-info {
     margin-left: 20px;
 }
 
 .chart-container {
-    position: relative;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
     /* justify-content: center; */
     width: 100%;
-    height: 70%;
     /* margin-top: 20%; */
 
 }
 
 .info-box {
     content: '';
-    top: 20%;
-    /* left: 50%; */
-    width: 40%;
+    top: -20%;
+    left: 50%;
+    width: 100%;
     background: #37375C;
     color: #fff;
     padding: 15px;
@@ -371,10 +351,6 @@ main {
     color: #FFFFFF;
 }
 
-.orders {
-    font-weight: 600;
-}
-
 .marks__container {
     margin-top: 3%;
     display: flex;
@@ -392,7 +368,7 @@ main {
     font-size: 12px;
     letter-spacing: 0.5px;
     opacity: 0.7;
-
+    color: #121212;
 }
 
 .marks__text p:nth-child(2) {
@@ -405,10 +381,13 @@ main {
 .graph__block {
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    padding: 10px;
+    gap: 2%;
+    justify-content: center;
+    /* align-items: center; */
 }
 
-.graph__block tr {
+tr {
     max-width: 90%;
     display: flex;
     align-items: center;
@@ -440,4 +419,101 @@ table tr td:nth-child(3) {
     color: #273240;
     opacity: 0.7;
 
+}
+
+@media (max-width: 768px) {
+    .container{
+        grid-template-columns: 0% 1fr;
+        grid-template-rows: 0% 2% 5% 1fr;
+        width: 100%;
+    
+    }
+    .dash {
+        display: none;
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .graph__container {
+        grid-column: span 1 / span 1;
+    }
+
+    .left {
+        display: none;
+        position: fixed;
+        left: 0;
+        background: white;
+        width: 20rem;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        z-index: 100;
+    }
+
+    .active {
+        max-width: 80%;
+    }
+
+    .logo {
+        margin-left: 2rem;
+    }
+
+    .menu__link{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    .menu__link:first-child,
+    .menu__link:last-child {
+        margin-top: 1rem;
+    }
+
+    .close {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main {
+        margin-top: 5rem;
+        padding: 0 1rem;
+    }
+
+    .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .account {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .account {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0 0.8rem;
+        align-items: center;
+        height: 4.6rem;
+        width: 100%;
+        margin: 0;
+        background-color: var(--color-white);
+        z-index: 2;
+        box-shadow: 0rem 1rem 1rem var(--color-light);
+    }
+
+    .info {
+        display: none;
+    }
+
+    #menu-btn {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
 }

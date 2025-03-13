@@ -112,7 +112,7 @@ p {
 }
 
 .left {
-    height: 100vh;
+    height: 100%;
     background: var(--left-panel);
     grid-row: span 3 / span 3;
 }
@@ -219,8 +219,22 @@ main {
 }
 
 /* ГРАФ 1 */
-.graph__container {
+.graph__container1 {
     grid-column: span 2 / span 2;
+    border-right: 1px solid #C8CBD9;
+    border-bottom: 1px solid #C8CBD9;
+}
+
+.graph__container2 {
+    border-bottom: 1px solid #C8CBD9;
+}
+
+.graph__container3 {
+    border-right: 1px solid #C8CBD9;
+}
+
+.graph__container4 {
+    border-right: 1px solid #C8CBD9;
 }
 
 .graph__top {
@@ -351,6 +365,89 @@ main {
     color: #FFFFFF;
 }
 
+/* ГРАФ 3 */
+  .chart__item{
+    border-bottom: 1px solid #E2E7E7;
+    display: flex;
+    gap: 30px;
+  }
+
+.chart-pipe{
+    background: #E6E8EC none repeat scroll 0 0;
+    width: 20px;
+    display: inline-block;
+    
+  }
+
+  
+  .chart__item .chart-pipe {
+    width: 20px;
+    height: 6.25rem;
+    transform: rotate(180deg);
+  }
+  
+  
+  .chart__item .chart-pipe >div{
+    background: var(--color-accent) none repeat scroll 0 0;
+    width: 1.25rem;
+    
+    
+    
+  }
+  
+  
+  .chart-sector1{
+
+    height: 40%;
+  }
+  
+  .chart-sector2{
+    height: 20%;
+    
+  }
+  
+  
+  .chart-sector3{
+    height: 50%;
+ 
+  }
+  
+  
+  .chart-sector4{
+    height: 30%;
+    
+  }
+  
+  .chart-sector5{
+      height: 50%;
+  
+    }
+  
+    .chart-sector6{
+      height: 35%;
+     
+    }
+  
+    .chart-sector7{
+      height: 40%;
+     
+    }
+
+.row{
+    display: flex;
+    margin-top: 0.5rem ;
+
+}
+
+.td{
+    text-align: center;
+    width: 1.25rem;
+    margin-right: 1.9rem;
+    color: #737B8B;
+    font-size: 11px;
+
+}
+
 .marks__container {
     margin-top: 3%;
     display: flex;
@@ -381,10 +478,15 @@ main {
 .graph__block {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5%;
     gap: 2%;
     justify-content: center;
     /* align-items: center; */
+}
+
+.rating {
+    max-width: fit-content;
+    margin-top: 5%;
 }
 
 tr {
@@ -421,6 +523,69 @@ table tr td:nth-child(3) {
 
 }
 
+@media (min-width: 1024px) and (max-width:1350px) {
+    table td:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 10% 5fr;
+    }
+
+    .graph__container1 {
+        border-right: none;
+    }
+
+    .graph__container3 {
+        border-right: none;
+        border-bottom: 1px solid #C8CBD9;
+    }
+
+    .graph__container4 {
+        border-bottom: 1px solid #C8CBD9;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .menu__span {
+        display: none;
+    }
+
+    .menu__link{
+        width: fit-content;
+        height: 3.4rem;
+    }
+
+    .active {
+        padding-left: 0;
+        padding: 5%;
+        margin-right: 0;
+        max-width: 40%;
+        height: 15%;
+    }
+
+    .menu h2 {
+        display: none;
+    }
+
+    .logo h1 {
+        display: none;
+        
+    }
+
+    .logo {
+        margin-bottom: 20%;
+    }
+    /* .graph__container {
+        grid-column: span 2 / span 2;
+    } */
+}
+
 @media (max-width: 768px) {
     .container{
         grid-template-columns: 0% 1fr;
@@ -428,16 +593,28 @@ table tr td:nth-child(3) {
         width: 100%;
     
     }
+
     .dash {
         display: none;
     }
+    
     main {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
-    .graph__container {
-        grid-column: span 1 / span 1;
+    .graph__container1 {
+        border-right: none;
+    }
+
+    .graph__container3 {
+        border-right: none;
+        border-bottom: 1px solid #C8CBD9;
+    }
+
+    .graph__container4 {
+        border-right: none;
+        border-bottom: 1px solid #C8CBD9;
     }
 
     .left {
@@ -480,11 +657,6 @@ table tr td:nth-child(3) {
         padding: 0 1rem;
     }
 
-    .insights {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
     .account {
         width: 94%;
         margin: 0 auto 4rem;
@@ -502,6 +674,10 @@ table tr td:nth-child(3) {
         background-color: var(--color-white);
         z-index: 2;
         box-shadow: 0rem 1rem 1rem var(--color-light);
+    }
+
+    .account p {
+        display: none;
     }
 
     .info {
